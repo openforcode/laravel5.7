@@ -28,4 +28,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * 默认的登录验证：vendor\laravel\passport\src\Bridge\UserRepository.php
+     * 大概45行是已email验证滴，在登录的时候很多人遇到invalid_credentials的错误，
+     * 登录这里我们必须重载
+     * @var array
+     */
+    public function findForPassport($login)
+    {
+        return $this->orWhere('email', $login)->orWhere('name', $login)->first();
+    }
 }
