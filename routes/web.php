@@ -25,3 +25,4 @@ Route::get('/auth/callback', function (\Illuminate\Http\Request $request){
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/test', 'TestController@index')->name('test');
