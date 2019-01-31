@@ -14,7 +14,7 @@ class TestController extends Controller
      */
     public function index()
     {
-        $studens = Student::search('no die')->get()->toArray();
+        $studens = Student::search('周伯通')->get()->toArray();
         print_r($studens);
     }
 }
