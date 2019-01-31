@@ -174,7 +174,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-        Laravel\Passport\PassportServiceProvider::class,
+        //Laravel\Passport\PassportServiceProvider::class, // 如果你使用的 Laravel 版本是 5.5 以下，可能需要手动添加
     ],
 
     /*
